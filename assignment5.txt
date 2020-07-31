@@ -1,0 +1,121 @@
+#DOM Programming Interface
+The HTML DOM can be accessed with JavaScript.
+In the DOM, all HTML elements are defined as objects.
+The programming interface is the properties and methods of each object.
+A property is a value that you can get or set 
+ Example:
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+
+</body>
+</html>
+
+#The HTML DOM Document Object
+
+Finding HTML Elements
+Method	                                                                            Description      
+document.getElementById(id)	                                  Find an element by element id
+document.getElementsByTagName(name)	                 Find elements by tag name
+document.getElementsByClassName(name)	Find elements by class name
+
+#Finding HTML Element by Id
+var myElement = document.getElementById("intro");
+
+#HTML Elements by Tag Name
+var x = document.getElementsByTagName("p");
+
+#Changing HTML Content
+example:
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+
+</body>
+</html>
+
+#Changing the Value of an Attribute
+example:
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="myImage" src="prasanna.gif">
+
+<script>
+document.getElementById("myImage").src = "protrait.jpg";
+</script>
+
+</body>
+</html>
+
+#Basic Web Page
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome First JavaScript </h1>
+
+</body>
+</html>
+
+#Assign Events Using HTML DOM
+
+Example:
+<script>
+document.getElementById("prasanna").onclick = displayDate;
+</script>
+
+#adding event handler to the objects
+window.addEventListener("resize", function(){
+  document.getElementById("demo").innerHTML = sometext;
+};
+
+#JS nodes
+<div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("This is new scripting to me.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+element.appendChild(para);
+</script>
+
+#JS nodelists
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM!</h2>
+
+<p>Hello World!</p>
+
+<p>Javascript!</p>
+
+<p id="demo"></p>
+
+<script>
+var myNodelist = document.querySelectorAll("p");
+document.getElementById("demo").innerHTML =
+"This document contains " + myNodelist.length + " paragraphs.";
+</script>
+
+</body>
+</html>
+
+
